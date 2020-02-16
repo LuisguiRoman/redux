@@ -13,8 +13,10 @@ export const App = () =>{
         <Router>
             <Menu />
 
-            <Route exact path="/" component={Usuarios} />
-            <Route exact path="/tareas" component={Tareas} />
+            <div>
+                <Route exact path="/" component={Usuarios} />
+                <Route exact path="/tareas" component={Tareas} />
+            </div>
         </Router>
     );
 }
