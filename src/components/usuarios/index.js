@@ -1,15 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import axios from 'axios'
+import { connect } from 'react-redux';
 
-export class Usuarios extends Component{
-    constructor(props){
-        super(props);
-
-        this.state = {
-            usuarios: []
-        };
-    }
-
+class Usuarios extends Component{
     async componentDidMount(){
         const res = await axios.get('https://jsonplaceholder.typicode.com/users');
 
@@ -19,7 +12,7 @@ export class Usuarios extends Component{
     }
     
     ponerfilas = () =>(
-        this.state.usuarios.map((usuario)=>(
+        this.props.usuarios.map((usuario)=>(
             <tr key={usuario.id}>
                 <td>{usuario.name}</td>
                 <td>{usuario.email}</td>
@@ -48,3 +41,12 @@ export class Usuarios extends Component{
         );
     }
 }
+
+
+//Seleccionar que reducer va a usar este componente
+//que estado global le vamos a enviar como props
+const mapStateToProps = (reducers) =>{
+    return reducers.usuariosReducer;
+}
+
+export default connect(mapStateToProps, {})(Usuarios);
