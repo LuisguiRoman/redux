@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    line-height: 1.4;
+  }
+  
+  .margen{
+    margin: 100px;
+  }
+  
+  .tabla{
+    width: 100%;
+    text-align: left;
+  }
+  
+  .container-table {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .tabla td{
+    padding: 10px 0;
+  }
+  
+  #menu{
+    background-color: #253A45;
+    padding: 20px;
+    font-size: 20px;
+  }
+  
+  #menu a{
+    color: white;
+    padding-right: 50px;
+  }
+  
