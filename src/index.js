@@ -7,6 +7,7 @@ import reducers from './reducers';
 import reduxThunk from 'redux-thunk';//middleware
 
 import './css/index.css';
+import './css/iconos.css';
 
 const store = createStore(
     reducers,

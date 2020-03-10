@@ -1,3 +1,2 @@
-export const TRAER_TODOS = 'traer_usuarios';
-
-export const LOADING = 'loading';
+export const TRAER_TODOS = 'usuarios_traer_todos';
+export const LOADING = 'usuarios_loading';
